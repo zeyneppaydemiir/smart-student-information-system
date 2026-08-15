@@ -1,0 +1,14 @@
+node_modules/
+.env
+.env.*
+!.env.example
+
+*.log
+.DS_Store
+
+.idea/
+.claude/
+
+student-assistant-backend/prisma/dev.db
+student-assistant-backend/uploads/
+student-assistant-backend/*.txt
