@@ -1,0 +1,119 @@
+[
+  {
+    "id": 1,
+    "title": "Course Registration Freeze",
+    "description": "Temporarily freeze your course registration for the current semester.",
+    "iconColor": "amber",
+    "status": "open",
+    "deadline": "May 20, 2026",
+    "urgent": false,
+    "fields": [
+      { "name": "reason", "label": "Reason for Freeze", "type": "textarea", "placeholder": "Please explain why you need to freeze your registration..." },
+      { "name": "duration", "label": "Requested Duration", "type": "select", "options": ["1 Week", "2 Weeks", "Full Semester"] }
+    ],
+    "info": "Your advisor will be notified upon submission. Processing takes 2-3 business days."
+  },
+  {
+    "id": 2,
+    "title": "Leave of Absence Request",
+    "description": "Apply for a temporary leave from the university for medical or personal reasons.",
+    "iconColor": "blue",
+    "status": "open",
+    "deadline": "May 25, 2026",
+    "urgent": false,
+    "fields": [
+      { "name": "type", "label": "Leave Type", "type": "select", "options": ["Medical", "Personal", "Financial", "Military"] },
+      { "name": "startDate", "label": "Start Date", "type": "date" },
+      { "name": "endDate", "label": "End Date", "type": "date" },
+      { "name": "reason", "label": "Supporting Statement", "type": "textarea", "placeholder": "Briefly describe your situation..." }
+    ],
+    "info": "A supporting document (e.g. medical report) may be required."
+  },
+  {
+    "id": 3,
+    "title": "Course Add / Drop",
+    "description": "Add a new course or drop an existing one within the allowed period.",
+    "iconColor": "sky",
+    "status": "submitted",
+    "deadline": "May 15, 2026",
+    "urgent": true,
+    "fields": [
+      { "name": "action", "label": "Action", "type": "select", "options": ["Add Course", "Drop Course"] },
+      { "name": "courseCode", "label": "Course Code", "type": "text", "placeholder": "e.g. CS-402" },
+      { "name": "justification", "label": "Justification", "type": "textarea", "placeholder": "Provide a brief reason..." }
+    ],
+    "info": "Add/Drop requests are subject to availability and advisor approval."
+  },
+  {
+    "id": 4,
+    "title": "Transcript Request",
+    "description": "Request an official or unofficial transcript to be sent to an institution.",
+    "iconColor": "green",
+    "status": "approved",
+    "deadline": null,
+    "urgent": false,
+    "fields": [
+      { "name": "type", "label": "Transcript Type", "type": "select", "options": ["Official (Sealed)", "Unofficial (Digital)"] },
+      { "name": "destination", "label": "Destination Institution", "type": "text", "placeholder": "e.g. MIT Admissions Office" },
+      { "name": "copies", "label": "Number of Copies", "type": "select", "options": ["1", "2", "3", "5"] }
+    ],
+    "info": "Official transcripts are mailed directly to the institution. Allow 5-7 business days."
+  },
+  {
+    "id": 5,
+    "title": "Exam Excuse Application",
+    "description": "Apply for a makeup exam if you missed a scheduled exam due to a valid reason.",
+    "iconColor": "purple",
+    "status": "open",
+    "deadline": "May 18, 2026",
+    "urgent": true,
+    "fields": [
+      { "name": "examName", "label": "Exam / Course Name", "type": "text", "placeholder": "e.g. CS-301 Midterm" },
+      { "name": "examDate", "label": "Original Exam Date", "type": "date" },
+      { "name": "excuseType", "label": "Excuse Type", "type": "select", "options": ["Medical", "Family Emergency", "Travel", "Other"] },
+      { "name": "details", "label": "Details", "type": "textarea", "placeholder": "Describe the circumstances..." }
+    ],
+    "info": "Supporting documentation must be submitted within 3 days of the original exam date."
+  },
+  {
+    "id": 6,
+    "title": "Graduation Application",
+    "description": "Submit your application to graduate at the end of this academic term.",
+    "iconColor": "teal",
+    "status": "closed",
+    "deadline": "Apr 30, 2026",
+    "urgent": false,
+    "fields": [],
+    "info": "The application period for this term has closed."
+  },
+  {
+    "id": 7,
+    "title": "Dormitory Application",
+    "description": "Apply for on-campus housing for the upcoming academic year.",
+    "iconColor": "slate",
+    "status": "rejected",
+    "deadline": null,
+    "urgent": false,
+    "fields": [
+      { "name": "roomType", "label": "Room Type Preference", "type": "select", "options": ["Single", "Double", "Triple"] },
+      { "name": "period", "label": "Period", "type": "select", "options": ["Fall 2026", "Spring 2027", "Full Year"] },
+      { "name": "notes", "label": "Additional Notes", "type": "textarea", "placeholder": "Any special requirements?" }
+    ],
+    "info": "Reapplication is possible for the next term."
+  },
+  {
+    "id": 8,
+    "title": "Name / ID Update Request",
+    "description": "Request an update to your personal information in the university system.",
+    "iconColor": "red",
+    "status": "open",
+    "deadline": null,
+    "urgent": false,
+    "fields": [
+      { "name": "field", "label": "Field to Update", "type": "select", "options": ["Legal Name", "Student ID Reprint", "Contact Email", "Phone Number"] },
+      { "name": "newValue", "label": "New Value", "type": "text", "placeholder": "Enter the correct value..." },
+      { "name": "reason", "label": "Reason", "type": "textarea", "placeholder": "Why is this update needed?" }
+    ],
+    "info": "A valid government-issued ID may be required."
+  }
+]

@@ -1,0 +1,929 @@
+/* ── Dark Mode Overrides ── */
+/* Applied when <html class="dark"> — covers all CSS files */
+
+html.dark {
+  color-scheme: dark;
+}
+
+html.dark body {
+  background: #0f172a;
+  color: #f1f5f9;
+}
+
+/* ══════════════════════════════════
+   TRANSITIONS — smooth theme switch
+══════════════════════════════════ */
+html.dark *,
+html:not(.dark) * {
+  transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+/* ══════════════════════════════════
+   SHARED LAYOUT (student pages)
+══════════════════════════════════ */
+
+html.dark .layout {
+  background: #0f172a;
+}
+
+html.dark .main {
+  background: #0f172a;
+}
+
+/* Topbar */
+html.dark .topbar {
+  background: #1e293b;
+  border-bottom-color: #334155;
+}
+
+html.dark .topbar-left h1 {
+  color: #f1f5f9;
+}
+
+html.dark .topbar-left p {
+  color: #94a3b8;
+}
+
+html.dark .topbar-btn {
+  border-color: #334155;
+  color: #94a3b8;
+}
+
+html.dark .topbar-btn:hover {
+  background: #334155;
+  border-color: #475569;
+  color: #f1f5f9;
+}
+
+html.dark .topbar-btn.active {
+  background: #334155;
+  border-color: #475569;
+  color: #f1f5f9;
+}
+
+html.dark .topbar-divider {
+  background: #334155;
+}
+
+html.dark .topbar-logout {
+  border-color: #334155;
+  color: #94a3b8;
+}
+
+html.dark .topbar-logout:hover {
+  background: rgba(226, 75, 74, 0.1);
+  border-color: #e24b4a;
+  color: #e24b4a;
+}
+
+html.dark .topbar-badge {
+  border-color: #1e293b;
+}
+
+/* Content area */
+html.dark .content {
+  background: #0f172a;
+}
+
+/* ── Stat cards ── */
+html.dark .stat-card {
+  background: #1e293b;
+  border-color: #334155;
+}
+
+html.dark .stat-card-label {
+  color: #94a3b8;
+}
+
+html.dark .stat-card-value {
+  color: #f1f5f9;
+}
+
+html.dark .stat-card-sub {
+  color: #94a3b8;
+}
+
+html.dark .stat-card.blue  .stat-card-icon { background: rgba(79, 122, 255, 0.15); }
+html.dark .stat-card.green .stat-card-icon { background: rgba(22, 163, 74, 0.15); }
+html.dark .stat-card.sky   .stat-card-icon { background: rgba(14, 165, 233, 0.15); }
+html.dark .stat-card.slate .stat-card-icon { background: rgba(71, 85, 105, 0.2); }
+
+/* ── Table section ── */
+html.dark .table-section {
+  background: #1e293b;
+  border-color: #334155;
+}
+
+html.dark .table-header {
+  border-bottom-color: #334155;
+}
+
+html.dark .table-header h3 {
+  color: #f1f5f9;
+}
+
+html.dark .table-header p {
+  color: #94a3b8;
+}
+
+html.dark .table-badge {
+  background: rgba(79, 122, 255, 0.15);
+  color: #7fa3ff;
+}
+
+html.dark .courses-table thead th {
+  color: #94a3b8;
+  background: #0f172a;
+  border-bottom-color: #334155;
+}
+
+html.dark .courses-table tbody tr:hover {
+  background: #334155;
+}
+
+html.dark .courses-table tbody tr:not(:last-child) {
+  border-bottom-color: #334155;
+}
+
+html.dark .courses-table tbody td {
+  color: #e2e8f0;
+}
+
+html.dark .course-code {
+  color: #94a3b8;
+}
+
+html.dark .instructor-avatar {
+  background: rgba(79, 122, 255, 0.15);
+  color: #7fa3ff;
+}
+
+html.dark .status-active  { background: rgba(22, 163, 74, 0.15);  color: #4ade80; }
+html.dark .status-pending { background: rgba(234, 88, 12, 0.15); color: #fb923c; }
+
+/* ══════════════════════════════════
+   TRANSCRIPT PAGE
+══════════════════════════════════ */
+
+html.dark .summary-card {
+  background: #1e293b;
+  border-color: #334155;
+}
+
+html.dark .summary-card-value {
+  color: #f1f5f9;
+}
+
+html.dark .summary-card-label {
+  color: #94a3b8;
+}
+
+html.dark .summary-card.blue  .summary-card-icon { background: rgba(79, 122, 255, 0.15); }
+html.dark .summary-card.green .summary-card-icon { background: rgba(22, 163, 74, 0.15); }
+html.dark .summary-card.amber .summary-card-icon { background: rgba(217, 119, 6, 0.15); }
+html.dark .summary-card.slate .summary-card-icon { background: rgba(71, 85, 105, 0.2); }
+
+html.dark .semester-block {
+  background: #1e293b;
+  border-color: #334155;
+}
+
+html.dark .semester-header:hover {
+  background: #334155;
+}
+
+html.dark .semester-title {
+  color: #f1f5f9;
+}
+
+html.dark .semester-sub {
+  color: #94a3b8;
+}
+
+html.dark .semester-table {
+  border-top-color: #334155;
+}
+
+html.dark .semester-footer {
+  background: #0f172a;
+  border-top-color: #334155;
+}
+
+html.dark .sem-footer-item {
+  color: #94a3b8;
+}
+
+html.dark .sem-footer-item span {
+  color: #f1f5f9;
+}
+
+html.dark .transcript-table thead th {
+  color: #94a3b8;
+  background: #0f172a;
+  border-bottom-color: #334155;
+}
+
+html.dark .transcript-table tbody tr:hover {
+  background: #334155;
+}
+
+html.dark .transcript-table tbody tr:not(:last-child) {
+  border-bottom-color: #334155;
+}
+
+html.dark .transcript-table tbody td {
+  color: #e2e8f0;
+}
+
+html.dark .tc-code {
+  color: #94a3b8;
+}
+
+html.dark .gpa-card {
+  background: #1e293b;
+  border-color: #334155;
+}
+
+html.dark .gpa-card-title {
+  color: #f1f5f9;
+}
+
+html.dark .gpa-bar-label {
+  color: #94a3b8;
+}
+
+html.dark .gpa-bar-track {
+  background: #334155;
+}
+
+html.dark .gpa-bar-value {
+  color: #f1f5f9;
+}
+
+html.dark .cumulative-gpa {
+  background: #1e293b;
+  border-color: #334155;
+}
+
+html.dark .cgpa-label {
+  color: #94a3b8;
+}
+
+html.dark .cgpa-value {
+  color: #f1f5f9;
+}
+
+html.dark .cgpa-sub {
+  color: #94a3b8;
+}
+
+html.dark .cgpa-bar-track {
+  background: #334155;
+}
+
+html.dark .cgpa-range {
+  color: #64748b;
+}
+
+html.dark .student-info-card {
+  background: #1e293b;
+}
+
+html.dark .download-btn {
+  background: #334155;
+  color: #f1f5f9;
+}
+
+html.dark .download-btn:hover {
+  background: #475569;
+}
+
+/* ══════════════════════════════════
+   GRADE BADGES (dark-mode safe)
+══════════════════════════════════ */
+html.dark .grade-aa { background: rgba(22,163,74,0.15);  color: #4ade80; }
+html.dark .grade-ba { background: rgba(79,122,255,0.15); color: #7fa3ff; }
+html.dark .grade-bb { background: rgba(14,165,233,0.15); color: #38bdf8; }
+html.dark .grade-cb { background: rgba(71,85,105,0.2);   color: #94a3b8; }
+html.dark .grade-cc { background: rgba(202,138,4,0.15);  color: #fbbf24; }
+html.dark .grade-ip { background: rgba(234,88,12,0.15);  color: #fb923c; }
+
+html.dark .grade-pill.g-aa { background: rgba(22,163,74,0.15);  color: #4ade80; }
+html.dark .grade-pill.g-ba { background: rgba(79,122,255,0.15); color: #7fa3ff; }
+html.dark .grade-pill.g-bb { background: rgba(14,165,233,0.15); color: #38bdf8; }
+html.dark .grade-pill.g-cb { background: rgba(71,85,105,0.2);   color: #94a3b8; border-color: #475569; }
+html.dark .grade-pill.g-cc { background: rgba(202,138,4,0.15);  color: #fbbf24; }
+html.dark .grade-pill.g-dc { background: rgba(234,88,12,0.15);  color: #fb923c; }
+html.dark .grade-pill.g-ff { background: rgba(226,75,74,0.15);  color: #f87171; }
+html.dark .grade-pill.g-ip { background: rgba(234,88,12,0.15);  color: #fb923c; }
+
+/* ══════════════════════════════════
+   LOGIN PAGE
+══════════════════════════════════ */
+
+html.dark .login-wrapper {
+  background: #0f172a;
+}
+
+html.dark .login-right {
+  background: #0f172a;
+}
+
+html.dark .login-card {
+  background: transparent;
+}
+
+html.dark .login-header h1 {
+  color: #f1f5f9;
+}
+
+html.dark .login-header p {
+  color: #94a3b8;
+}
+
+html.dark .form-group label {
+  color: #e2e8f0;
+}
+
+html.dark .form-input {
+  background: #1e293b;
+  border-color: #334155;
+  color: #f1f5f9;
+}
+
+html.dark .form-input::placeholder {
+  color: #64748b;
+}
+
+html.dark .form-input:focus {
+  border-color: #4f7aff;
+  box-shadow: 0 0 0 3px rgba(79, 122, 255, 0.15);
+}
+
+html.dark .input-icon {
+  color: #64748b;
+}
+
+html.dark .login-footer {
+  color: #94a3b8;
+}
+
+html.dark .login-btn {
+  background: #334155;
+  color: #f1f5f9;
+}
+
+html.dark .login-btn:hover {
+  background: #475569;
+}
+
+/* ══════════════════════════════════
+   TOPBAR PANELS (notifications + profile)
+══════════════════════════════════ */
+
+html.dark .tp-panel {
+  background: #1e293b;
+  border-color: #334155;
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.5);
+}
+
+html.dark .tp-panel-header {
+  border-bottom-color: #334155;
+}
+
+html.dark .tp-panel-title {
+  color: #f1f5f9;
+}
+
+html.dark .tp-panel-sub {
+  color: #94a3b8;
+}
+
+html.dark .tp-icon-btn {
+  border-color: #334155;
+  color: #94a3b8;
+}
+
+html.dark .tp-icon-btn:hover {
+  background: #334155;
+  color: #f1f5f9;
+}
+
+html.dark .tp-text-btn {
+  color: #7fa3ff;
+}
+
+html.dark .tp-text-btn:hover {
+  background: rgba(79, 122, 255, 0.1);
+}
+
+html.dark .notif-item {
+  border-bottom-color: #334155;
+}
+
+html.dark .notif-item:hover {
+  background: #334155;
+}
+
+html.dark .notif-item.unread {
+  background: rgba(79, 122, 255, 0.05);
+}
+
+html.dark .notif-title {
+  color: #f1f5f9;
+}
+
+html.dark .notif-text {
+  color: #94a3b8;
+}
+
+html.dark .notif-time {
+  color: #64748b;
+}
+
+html.dark .tp-panel-footer {
+  border-top-color: #334155;
+}
+
+html.dark .tp-footer-btn {
+  border-color: #334155;
+  color: #f1f5f9;
+}
+
+html.dark .tp-footer-btn:hover {
+  background: #334155;
+  border-color: #475569;
+}
+
+html.dark .tp-badge {
+  border-color: #1e293b;
+}
+
+/* Profile panel */
+html.dark .profile-panel {
+  background: #1e293b;
+}
+
+html.dark .profile-hero {
+  background: #0f172a;
+  border-bottom-color: #334155;
+}
+
+html.dark .profile-hero-bg {
+  background: #0f172a;
+}
+
+html.dark .profile-avatar {
+  border-color: #334155;
+}
+
+html.dark .profile-online-dot {
+  border-color: #1e293b;
+}
+
+html.dark .profile-name {
+  color: #f1f5f9;
+}
+
+html.dark .profile-id {
+  color: #94a3b8;
+}
+
+html.dark .profile-section {
+  border-bottom-color: #334155;
+}
+
+html.dark .profile-section-label {
+  color: #64748b;
+}
+
+html.dark .profile-info-label {
+  color: #94a3b8;
+}
+
+html.dark .profile-info-value {
+  color: #f1f5f9;
+}
+
+html.dark .profile-action-btn.secondary {
+  border-color: #334155;
+  color: #f1f5f9;
+}
+
+html.dark .profile-action-btn.secondary:hover {
+  background: #334155;
+  border-color: #475569;
+}
+
+/* ══════════════════════════════════
+   INSTRUCTOR LAYOUT
+══════════════════════════════════ */
+
+html.dark .inst-layout {
+  background: #0f172a;
+}
+
+html.dark .inst-main {
+  background: #0f172a;
+}
+
+html.dark .inst-topbar {
+  background: #1e293b;
+  border-bottom-color: #334155;
+}
+
+html.dark .inst-topbar-left h1 {
+  color: #f1f5f9;
+}
+
+html.dark .inst-topbar-left p {
+  color: #94a3b8;
+}
+
+html.dark .inst-content {
+  background: #0f172a;
+}
+
+/* Inst summary cards */
+html.dark .inst-summary-card {
+  background: #1e293b;
+  border-color: #334155;
+}
+
+html.dark .inst-summary-card-value {
+  color: #f1f5f9;
+}
+
+html.dark .inst-summary-card-label {
+  color: #94a3b8;
+}
+
+html.dark .inst-summary-card.green .inst-summary-card-icon { background: rgba(22,163,74,0.15); }
+html.dark .inst-summary-card.blue  .inst-summary-card-icon { background: rgba(37,99,235,0.15); }
+html.dark .inst-summary-card.amber .inst-summary-card-icon { background: rgba(217,119,6,0.15); }
+html.dark .inst-summary-card.slate .inst-summary-card-icon { background: rgba(71,85,105,0.2); }
+
+/* Inst section card */
+html.dark .inst-section-card {
+  background: #1e293b;
+  border-color: #334155;
+}
+
+html.dark .inst-section-header {
+  border-bottom-color: #334155;
+}
+
+html.dark .inst-section-title {
+  color: #f1f5f9;
+}
+
+html.dark .inst-section-sub {
+  color: #94a3b8;
+}
+
+/* Inst offering cards */
+html.dark .inst-offering-card {
+  background: #1e293b;
+  border-color: #334155;
+}
+
+html.dark .inst-offering-card:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+}
+
+html.dark .inst-offering-card-name {
+  color: #f1f5f9;
+}
+
+html.dark .inst-offering-card-meta {
+  color: #94a3b8;
+}
+
+html.dark .inst-offering-card-footer {
+  border-top-color: #334155;
+}
+
+html.dark .inst-offering-card-count {
+  background: #334155;
+  color: #94a3b8;
+}
+
+/* Inst table */
+html.dark .inst-table th {
+  color: #94a3b8;
+  background: #0f172a;
+  border-bottom-color: #334155;
+}
+
+html.dark .inst-table td {
+  color: #e2e8f0;
+  border-bottom-color: #334155;
+}
+
+html.dark .inst-table tr:hover td {
+  background: #334155;
+}
+
+/* Inst tabs */
+html.dark .inst-tabs {
+  background: #0f172a;
+}
+
+html.dark .inst-tab {
+  color: #94a3b8;
+}
+
+html.dark .inst-tab.active {
+  background: #1e293b;
+  color: #f1f5f9;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Inst modal */
+html.dark .inst-modal-overlay {
+  background: rgba(0, 0, 0, 0.6);
+}
+
+html.dark .inst-modal {
+  background: #1e293b;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+}
+
+html.dark .inst-modal-header {
+  border-bottom-color: #334155;
+}
+
+html.dark .inst-modal-title {
+  color: #f1f5f9;
+}
+
+html.dark .inst-modal-close {
+  background: #334155;
+  color: #94a3b8;
+}
+
+html.dark .inst-modal-close:hover {
+  background: rgba(226, 75, 74, 0.15);
+  color: #f87171;
+}
+
+html.dark .inst-modal-field label {
+  color: #e2e8f0;
+}
+
+html.dark .inst-modal-field input,
+html.dark .inst-modal-field select {
+  background: #0f172a;
+  border-color: #334155;
+  color: #f1f5f9;
+}
+
+html.dark .inst-modal-field input:focus,
+html.dark .inst-modal-field select:focus {
+  border-color: #10b981;
+  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.15);
+}
+
+html.dark .inst-modal-footer {
+  background: #0f172a;
+  border-top-color: #334155;
+}
+
+/* Inst buttons */
+html.dark .inst-btn-secondary {
+  background: #334155;
+  color: #f1f5f9;
+  border-color: #475569;
+}
+
+html.dark .inst-btn-secondary:hover {
+  border-color: #10b981;
+  color: #10b981;
+}
+
+html.dark .inst-logout-btn {
+  background: transparent;
+  border-color: #334155;
+  color: #94a3b8;
+}
+
+html.dark .inst-logout-btn:hover {
+  border-color: #e24b4a;
+  color: #e24b4a;
+  background: rgba(226, 75, 74, 0.1);
+}
+
+html.dark .inst-theme-toggle-btn {
+  border-color: #334155;
+  color: #94a3b8;
+}
+
+html.dark .inst-theme-toggle-btn:hover {
+  background: #334155;
+  border-color: #475569;
+  color: #f1f5f9;
+}
+
+html.dark .inst-empty {
+  color: #94a3b8;
+}
+
+/* Grade select in instructor table */
+html.dark .grade-select {
+  background: #0f172a;
+  border-color: #334155;
+  color: #f1f5f9;
+}
+
+html.dark .grade-select:focus {
+  border-color: #10b981;
+}
+
+/* Attendance radio buttons */
+html.dark .att-radio-btn {
+  border-color: #334155;
+  background: #0f172a;
+  color: #94a3b8;
+}
+
+/* Inst badge */
+html.dark .inst-badge.active    { background: rgba(22,163,74,0.15);  color: #4ade80; }
+html.dark .inst-badge.dropped   { background: rgba(226,75,74,0.15);  color: #f87171; }
+html.dark .inst-badge.completed { background: rgba(79,122,255,0.15); color: #7fa3ff; }
+
+/* ══════════════════════════════════
+   CHAT WIDGET (student panel)
+══════════════════════════════════ */
+
+html.dark .chat-panel {
+  background: #1e293b;
+  border-left-color: #334155;
+}
+
+html.dark .chat-messages {
+  background: #0f172a;
+}
+
+html.dark .chat-messages::-webkit-scrollbar-thumb {
+  background: #334155;
+}
+
+html.dark .chat-intro {
+  background: rgba(79, 122, 255, 0.1);
+  border-color: rgba(79, 122, 255, 0.2);
+}
+
+html.dark .chat-suggestion-btn {
+  background: #1e293b;
+  border-color: #334155;
+  color: #e2e8f0;
+}
+
+html.dark .chat-suggestion-btn:hover {
+  background: rgba(79, 122, 255, 0.1);
+  border-color: rgba(79, 122, 255, 0.3);
+  color: #7fa3ff;
+}
+
+html.dark .chat-bubble {
+  background: #1e293b;
+  border-color: #334155;
+  color: #e2e8f0;
+}
+
+html.dark .typing-dots {
+  background: #1e293b;
+  border-color: #334155;
+}
+
+html.dark .typing-dots span {
+  background: #475569;
+}
+
+html.dark .chat-input-area {
+  background: #1e293b;
+  border-top-color: #334155;
+}
+
+html.dark .chat-input {
+  background: #0f172a;
+  border-color: #334155;
+  color: #f1f5f9;
+}
+
+html.dark .chat-input::placeholder {
+  color: #64748b;
+}
+
+html.dark .chat-input:focus {
+  border-color: #4f7aff;
+  background: #0f172a;
+  box-shadow: 0 0 0 3px rgba(79, 122, 255, 0.1);
+}
+
+html.dark .chat-input-hint {
+  color: #64748b;
+}
+
+/* ══════════════════════════════════
+   INSTRUCTOR CHAT WIDGET (floating)
+══════════════════════════════════ */
+
+html.dark .icw-panel {
+  background: #1e293b;
+  border-color: #334155;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+}
+
+html.dark .icw-messages {
+  background: #0f172a;
+}
+
+html.dark .icw-bubble {
+  background: #1e293b;
+  border-color: #334155;
+  color: #e2e8f0;
+}
+
+html.dark .icw-input {
+  background: #0f172a;
+  border-color: #334155;
+  color: #f1f5f9;
+}
+
+html.dark .icw-input::placeholder {
+  color: #64748b;
+}
+
+html.dark .icw-input:focus {
+  border-color: #10b981;
+  background: #0f172a;
+}
+
+html.dark .icw-input-area {
+  background: #1e293b;
+  border-top-color: #334155;
+}
+
+html.dark .icw-suggestion-btn {
+  background: #1e293b;
+  border-color: #334155;
+  color: #e2e8f0;
+}
+
+/* ══════════════════════════════════
+   CURRICULUM PAGE (heavy inline styles)
+   Override via CSS vars on .content
+══════════════════════════════════ */
+
+html.dark .content {
+  --card-bg: #1e293b;
+  --card-border: #334155;
+  --text-primary: #f1f5f9;
+  --text-muted: #94a3b8;
+  --hover-bg: #334155;
+}
+
+/* ══════════════════════════════════
+   COURSE SELECTION / FORMS / SCHEDULE /
+   ATTENDANCE — extra selectors
+══════════════════════════════════ */
+
+/* Forms page — any white cards, section headers */
+html.dark select,
+html.dark input[type="text"],
+html.dark input[type="email"],
+html.dark input[type="password"],
+html.dark input[type="time"],
+html.dark textarea {
+  background: #1e293b;
+  border-color: #334155;
+  color: #f1f5f9;
+}
+
+html.dark select option {
+  background: #1e293b;
+  color: #f1f5f9;
+}
+
+/* ══════════════════════════════════
+   SCROLLBAR global
+══════════════════════════════════ */
+
+html.dark ::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+html.dark ::-webkit-scrollbar-track {
+  background: #0f172a;
+}
+
+html.dark ::-webkit-scrollbar-thumb {
+  background: #334155;
+  border-radius: 10px;
+}
+
+html.dark ::-webkit-scrollbar-thumb:hover {
+  background: #475569;
+}

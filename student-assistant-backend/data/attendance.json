@@ -1,0 +1,18 @@
+{
+  "courses": [
+    { "id": 1, "code": "CS-301",   "name": "Database Systems",             "instructor": "Dr. A. Johnson", "totalWeeks": 14, "attended": 11, "absent": 2, "late": 1 },
+    { "id": 2, "code": "CS-214",   "name": "Web Development",              "instructor": "Dr. S. Miller",  "totalWeeks": 14, "attended": 10, "absent": 3, "late": 1 },
+    { "id": 3, "code": "CS-221",   "name": "Algorithms & Data Structures", "instructor": "Prof. R. Chen",  "totalWeeks": 14, "attended": 13, "absent": 1, "late": 0 },
+    { "id": 4, "code": "CS-310",   "name": "Operating Systems",            "instructor": "Dr. L. Brown",   "totalWeeks": 14, "attended": 9,  "absent": 4, "late": 1 },
+    { "id": 5, "code": "MATH-201", "name": "Discrete Mathematics",         "instructor": "Prof. E. Davis", "totalWeeks": 14, "attended": 12, "absent": 1, "late": 1 },
+    { "id": 6, "code": "ENG-102",  "name": "Technical Writing",            "instructor": "Ms. K. White",   "totalWeeks": 7,  "attended": 6,  "absent": 1, "late": 0 }
+  ],
+  "recentAbsences": [
+    { "course": "Operating Systems", "code": "CS-310", "date": "May 6, 2026",  "type": "absent" },
+    { "course": "Web Development",   "code": "CS-214", "date": "May 5, 2026",  "type": "late" },
+    { "course": "Web Development",   "code": "CS-214", "date": "Apr 28, 2026", "type": "absent" },
+    { "course": "Operating Systems", "code": "CS-310", "date": "Apr 24, 2026", "type": "absent" },
+    { "course": "Database Systems",  "code": "CS-301", "date": "Apr 21, 2026", "type": "excused" },
+    { "course": "Operating Systems", "code": "CS-310", "date": "Apr 17, 2026", "type": "absent" }
+  ]
+}

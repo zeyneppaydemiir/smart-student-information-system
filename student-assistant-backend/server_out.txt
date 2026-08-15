@@ -1,0 +1,12 @@
+====================================
+  SIS Backend basladi!
+  http://localhost:3001
+====================================
+Test kullanicisi:
+  Email: test@test.com
+  Sifre: 123456
+====================================
+[14:21:46] POST /api/auth/login
+[14:21:46] POST /api/chat
+Chat hatasi: 429 status code (no body)
+[14:21:49] POST /api/chat

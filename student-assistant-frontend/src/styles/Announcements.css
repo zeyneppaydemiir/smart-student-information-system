@@ -1,0 +1,506 @@
+/* ═══════════════════════════════════
+   SHARED ANNOUNCEMENT STYLES
+═══════════════════════════════════ */
+
+/* ── Instructor Announcements Page ── */
+.ann-layout {
+  display: flex;
+  gap: 24px;
+  padding: 24px 28px;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* Left: form panel */
+.ann-form-panel {
+  width: 340px;
+  flex-shrink: 0;
+  background: #fff;
+  border: 1px solid #eaecef;
+  border-radius: 12px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  align-self: flex-start;
+}
+
+.ann-form-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: #1a1f2e;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.ann-field label {
+  display: block;
+  font-size: 12px;
+  font-weight: 500;
+  color: #7c8591;
+  margin-bottom: 5px;
+}
+
+.ann-field select,
+.ann-field input[type="text"] {
+  width: 100%;
+  padding: 8px 11px;
+  font-size: 13px;
+  border: 1.5px solid #e4e7eb;
+  border-radius: 8px;
+  outline: none;
+  color: #1a1f2e;
+  background: #fff;
+  transition: border-color 0.15s;
+}
+
+.ann-field select:focus,
+.ann-field input[type="text"]:focus {
+  border-color: #10b981;
+}
+
+.ann-type-toggle {
+  display: flex;
+  gap: 8px;
+}
+
+.ann-type-btn {
+  flex: 1;
+  padding: 8px;
+  border-radius: 8px;
+  border: 1.5px solid #e4e7eb;
+  background: #f8f9fa;
+  font-size: 12px;
+  font-weight: 500;
+  color: #7c8591;
+  cursor: pointer;
+  transition: all 0.15s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.ann-type-btn.active {
+  background: #f0fdf4;
+  border-color: #10b981;
+  color: #10b981;
+}
+
+.ann-field textarea {
+  width: 100%;
+  padding: 9px 11px;
+  font-size: 13px;
+  border: 1.5px solid #e4e7eb;
+  border-radius: 8px;
+  outline: none;
+  color: #1a1f2e;
+  background: #fff;
+  resize: vertical;
+  min-height: 90px;
+  font-family: inherit;
+  transition: border-color 0.15s;
+}
+
+.ann-field textarea:focus {
+  border-color: #10b981;
+}
+
+.ann-file-input-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 12px;
+  border: 1.5px dashed #d1d9e0;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 12px;
+  color: #7c8591;
+  transition: all 0.15s;
+}
+
+.ann-file-input-label:hover {
+  border-color: #10b981;
+  color: #10b981;
+}
+
+.ann-file-input-label input {
+  display: none;
+}
+
+.ann-file-selected {
+  font-size: 12px;
+  color: #10b981;
+  font-weight: 500;
+  padding: 4px 0;
+}
+
+.ann-error {
+  font-size: 12px;
+  color: #e24b4a;
+  background: #fef2f2;
+  padding: 8px 12px;
+  border-radius: 6px;
+}
+
+.ann-submit-btn {
+  width: 100%;
+  padding: 10px;
+  background: #10b981;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+.ann-submit-btn:hover:not(:disabled) {
+  background: #0d9668;
+}
+
+.ann-submit-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Right: announcement list */
+.ann-list-panel {
+  flex: 1;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.ann-list-header {
+  font-size: 14px;
+  font-weight: 600;
+  color: #1a1f2e;
+  margin-bottom: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.ann-list-sub {
+  font-size: 12px;
+  color: #7c8591;
+  margin-bottom: 10px;
+}
+
+.ann-card {
+  background: #fff;
+  border: 1px solid #eaecef;
+  border-radius: 10px;
+  padding: 14px 16px;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  transition: box-shadow 0.15s;
+}
+
+.ann-card:hover {
+  box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+}
+
+.ann-card-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 9px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.ann-card-icon.pdf  { background: #fef2f2; color: #e24b4a; }
+.ann-card-icon.msg  { background: #eff4ff; color: #4f7aff; }
+
+.ann-card-body {
+  flex: 1;
+  min-width: 0;
+}
+
+.ann-card-title {
+  font-size: 13px;
+  font-weight: 600;
+  color: #1a1f2e;
+  margin-bottom: 3px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.ann-card-course {
+  font-size: 11px;
+  color: #7c8591;
+  margin-bottom: 4px;
+}
+
+.ann-card-meta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.ann-badge {
+  font-size: 10px;
+  font-weight: 700;
+  padding: 2px 7px;
+  border-radius: 4px;
+}
+
+.ann-badge.pdf  { background: #fef2f2; color: #e24b4a; }
+.ann-badge.msg  { background: #eff4ff; color: #4f7aff; }
+
+.ann-read-count {
+  font-size: 11px;
+  color: #7c8591;
+}
+
+.ann-date {
+  font-size: 11px;
+  color: #94a3b8;
+}
+
+.ann-delete-btn {
+  padding: 6px 8px;
+  border-radius: 7px;
+  border: none;
+  background: #fef2f2;
+  color: #e24b4a;
+  cursor: pointer;
+  transition: all 0.15s;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+}
+
+.ann-delete-btn:hover {
+  background: #fee2e2;
+}
+
+.ann-empty {
+  text-align: center;
+  padding: 40px 20px;
+  color: #94a3b8;
+}
+
+.ann-empty svg {
+  opacity: 0.35;
+  margin-bottom: 10px;
+}
+
+.ann-empty p {
+  font-size: 13px;
+}
+
+/* Toast */
+.ann-toast {
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  padding: 12px 20px;
+  border-radius: 10px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #fff;
+  background: #10b981;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+  z-index: 9999;
+  animation: toastIn 0.2s ease;
+}
+
+.ann-toast.error { background: #ef4444; }
+
+@keyframes toastIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ═══════════════════════════════════
+   STUDENT ANNOUNCEMENTS PAGE
+═══════════════════════════════════ */
+
+.san-content {
+  padding: 24px 28px;
+  overflow-y: auto;
+  flex: 1;
+}
+
+.san-header-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 18px;
+}
+
+.san-mark-all-btn {
+  padding: 7px 14px;
+  border-radius: 8px;
+  border: 1.5px solid #e4e7eb;
+  background: #fff;
+  font-size: 12px;
+  font-weight: 500;
+  color: #7c8591;
+  cursor: pointer;
+  transition: all 0.15s;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.san-mark-all-btn:hover {
+  border-color: #4f7aff;
+  color: #4f7aff;
+}
+
+.san-group-label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.7px;
+  text-transform: uppercase;
+  color: #94a3b8;
+  margin: 18px 0 8px;
+}
+
+.san-card {
+  background: #fff;
+  border: 1px solid #eaecef;
+  border-radius: 10px;
+  padding: 14px 16px;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  transition: box-shadow 0.15s;
+  border-left: 3px solid transparent;
+}
+
+.san-card.unread {
+  border-left-color: #4f7aff;
+  background: #f8faff;
+}
+
+.san-card-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 9px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.san-card-icon.pdf  { background: #fef2f2; color: #e24b4a; }
+.san-card-icon.msg  { background: #eff4ff; color: #4f7aff; }
+
+.san-card-body {
+  flex: 1;
+  min-width: 0;
+}
+
+.san-card-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 4px;
+  flex-wrap: wrap;
+}
+
+.san-card-title {
+  font-size: 13px;
+  font-weight: 600;
+  color: #1a1f2e;
+}
+
+.san-unread-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #4f7aff;
+  flex-shrink: 0;
+}
+
+.san-badge {
+  font-size: 10px;
+  font-weight: 700;
+  padding: 2px 7px;
+  border-radius: 4px;
+}
+
+.san-badge.pdf  { background: #fef2f2; color: #e24b4a; }
+.san-badge.msg  { background: #eff4ff; color: #4f7aff; }
+
+.san-course {
+  font-size: 11px;
+  color: #7c8591;
+  margin-bottom: 4px;
+}
+
+.san-content-text {
+  font-size: 13px;
+  color: #374151;
+  line-height: 1.5;
+  margin-top: 6px;
+  background: #f8f9fa;
+  padding: 8px 10px;
+  border-radius: 6px;
+}
+
+.san-date {
+  font-size: 11px;
+  color: #94a3b8;
+  margin-top: 4px;
+}
+
+.san-download-btn {
+  padding: 7px 14px;
+  border-radius: 8px;
+  border: 1.5px solid #fca5a5;
+  background: #fff5f5;
+  color: #e24b4a;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.15s;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  white-space: nowrap;
+  flex-shrink: 0;
+  align-self: center;
+}
+
+.san-download-btn:hover {
+  background: #fee2e2;
+  border-color: #f87171;
+}
+
+.san-download-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.san-empty {
+  text-align: center;
+  padding: 60px 20px;
+  color: #94a3b8;
+}
+
+.san-empty svg {
+  opacity: 0.35;
+  margin-bottom: 12px;
+}
+
+.san-empty p {
+  font-size: 14px;
+}

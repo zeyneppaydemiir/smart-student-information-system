@@ -1,0 +1,252 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id             Int          @id @default(autoincrement())
+  email          String       @unique
+  passwordHash   String
+  fullName       String
+  studentNumber  String       @unique
+  program        String
+  department     String
+  year           Int          @default(1)
+  totalYears     Int          @default(4)
+  advisor        String?
+  gpa            Float?
+  profilePicture String?
+  createdAt      DateTime     @default(now())
+  courses          Course[]
+  attendance       Attendance[]
+  transcripts      Transcript[]
+  submissions      Submission[]
+  enrollments      Enrollment[]
+  attendanceNew    AttendanceNew[]
+  announcementReads AnnouncementRead[]
+}
+
+// Mevcut dönem dersleri
+model Course {
+  id                 Int         @id @default(autoincrement())
+  userId             Int
+  courseCode         String
+  courseName         String
+  courseNameEn       String?
+  department         String?
+  instructor         String?
+  instructorInitials String?
+  schedule           String?     // "Mon / Wed  09:00-10:30" formatında
+  room               String?
+  credits            Int
+  grade              String?
+  progress           Int         @default(0)
+  status             String      @default("active") // active | pending | done
+  semester           String
+  color              String?
+  days               String?     // virgülle ayrılmış: "1,3,5"
+  startHour          Int?
+  startMin           Int?
+  endHour            Int?
+  endMin             Int?
+  user               User        @relation(fields: [userId], references: [id])
+  attendance         Attendance?
+
+  @@unique([userId, courseCode, semester])
+}
+
+// Devamsızlık özeti (kurs bazında)
+model Attendance {
+  id         Int                @id @default(autoincrement())
+  userId     Int
+  courseId   Int                @unique
+  courseCode String
+  courseName String?
+  instructor String?
+  totalWeeks Int                @default(0)
+  attended   Int                @default(0)
+  absent     Int                @default(0)
+  late       Int                @default(0)
+  user       User               @relation(fields: [userId], references: [id])
+  course     Course             @relation(fields: [courseId], references: [id])
+  records    AttendanceRecord[]
+}
+
+// Bireysel devamsızlık kayıtları (recentAbsences)
+model AttendanceRecord {
+  id           Int        @id @default(autoincrement())
+  attendanceId Int
+  courseCode   String
+  date         String
+  type         String     // absent | late | excused
+  attendance   Attendance @relation(fields: [attendanceId], references: [id])
+}
+
+// Transkript — dönem bazında
+model Transcript {
+  id            Int               @id @default(autoincrement())
+  userId        Int
+  semester      String
+  label         String
+  status        String
+  gpa           Float?
+  creditsEarned Int
+  color         String?
+  user          User              @relation(fields: [userId], references: [id])
+  courses       TranscriptCourse[]
+
+  @@unique([userId, semester])
+}
+
+// Transkript içindeki bireysel dersler
+model TranscriptCourse {
+  id           Int        @id @default(autoincrement())
+  transcriptId Int
+  courseCode   String
+  courseName   String
+  courseNameEn String?
+  credits      Int
+  grade        String
+  transcript   Transcript @relation(fields: [transcriptId], references: [id])
+}
+
+// Başvuru formları (herkese ortak)
+model Form {
+  id          Int          @id @default(autoincrement())
+  title       String
+  description String?
+  iconColor   String?
+  status      String       @default("open")
+  deadline    String?
+  urgent      Boolean      @default(false)
+  fields      String?      // JSON string: form alanı tanımları
+  info        String?
+  submissions Submission[]
+}
+
+// Öğrenci form başvuruları
+model Submission {
+  id        Int      @id @default(autoincrement())
+  userId    Int
+  formId    Int
+  status    String   @default("pending")
+  data      String?  // JSON string: doldurulmuş form verisi
+  createdAt DateTime @default(now())
+  user      User     @relation(fields: [userId], references: [id])
+  form      Form     @relation(fields: [formId], references: [id])
+}
+
+// ── YENİ TABLOLAR (Müfredat & Öğretim Üyesi Sistemi) ──────────────────────
+
+model Curriculum {
+  id           Int      @id @default(autoincrement())
+  department   String
+  courseCode   String
+  courseName   String
+  courseNameEn String?
+  credits      Int
+  ects         Int
+  type         String   // "Z" = Zorunlu, "S" = Seçmeli
+  year         Int      // 1, 2, 3, 4
+  semester     String   // "Güz" veya "Bahar"
+
+  offerings   CourseOffering[]
+
+  @@unique([courseCode, department])
+}
+
+model Instructor {
+  id             Int      @id @default(autoincrement())
+  email          String   @unique
+  passwordHash   String
+  fullName       String
+  title          String   // "Dr.", "Prof. Dr.", "Doç. Dr." vs.
+  department     String
+  phone          String?
+  profilePicture String?
+  createdAt      DateTime @default(now())
+
+  offerings         CourseOffering[]
+  attendanceRecords AttendanceNew[]
+  announcements     Announcement[]
+}
+
+model CourseOffering {
+  id           Int      @id @default(autoincrement())
+  curriculumId Int
+  instructorId Int
+  academicTerm String   // "2025-2026 Güz" gibi
+  day          String?
+  startTime    String?
+  endTime      String?
+  room         String?
+
+  curriculum    Curriculum     @relation(fields: [curriculumId], references: [id])
+  instructor    Instructor     @relation(fields: [instructorId], references: [id])
+  enrollments   Enrollment[]
+  attendance    AttendanceNew[]
+  announcements Announcement[]
+
+  @@unique([curriculumId, academicTerm, instructorId])
+}
+
+model Enrollment {
+  id         Int      @id @default(autoincrement())
+  studentId  Int
+  offeringId Int
+  grade      String?  // "AA", "BA", "BB", "CB", "CC", "DC", "DD", "FD", "FF", null
+  status     String   @default("active")  // active | pending | rejected | dropped | completed | graded
+  enrolledAt DateTime @default(now())
+
+  student  User           @relation(fields: [studentId], references: [id])
+  offering CourseOffering @relation(fields: [offeringId], references: [id])
+
+  @@unique([studentId, offeringId])
+}
+
+model AttendanceNew {
+  id           Int      @id @default(autoincrement())
+  studentId    Int
+  offeringId   Int
+  instructorId Int
+  date         DateTime
+  status       String   // "present", "absent", "late"
+
+  student    User           @relation(fields: [studentId], references: [id])
+  offering   CourseOffering @relation(fields: [offeringId], references: [id])
+  instructor Instructor     @relation(fields: [instructorId], references: [id])
+
+  @@unique([studentId, offeringId, date])
+}
+
+model Announcement {
+  id           Int      @id @default(autoincrement())
+  offeringId   Int
+  instructorId Int
+  type         String   // "message" | "pdf"
+  title        String
+  content      String?
+  fileName     String?
+  filePath     String?
+  createdAt    DateTime @default(now())
+
+  offering   CourseOffering     @relation(fields: [offeringId], references: [id])
+  instructor Instructor         @relation(fields: [instructorId], references: [id])
+  reads      AnnouncementRead[]
+}
+
+model AnnouncementRead {
+  id             Int      @id @default(autoincrement())
+  announcementId Int
+  studentId      Int
+  readAt         DateTime @default(now())
+
+  announcement Announcement @relation(fields: [announcementId], references: [id])
+  student      User         @relation(fields: [studentId], references: [id])
+
+  @@unique([announcementId, studentId])
+}

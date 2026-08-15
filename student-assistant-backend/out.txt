@@ -1,0 +1,21 @@
+====================================
+  SIS Backend basladi!
+  http://localhost:3001
+====================================
+Test kullanicisi:
+  Email: test@test.com
+  Sifre: 123456
+====================================
+[14:23:52] GET /api/courses
+[14:23:53] POST /api/auth/register
+[14:23:53] POST /api/auth/register
+[14:23:53] POST /api/auth/login
+[14:23:53] POST /api/auth/login
+[14:23:53] GET /api/courses/1
+[14:23:53] GET /api/transcript/1
+[14:23:53] POST /api/forms/1/submit
+[14:23:53] GET /api/forms/submissions/all
+[14:23:53] POST /api/forms/6/submit
+[14:23:53] POST /api/auth/login
+[14:23:53] GET /api/courses
+[14:23:53] GET /api/courses

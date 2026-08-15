@@ -1,0 +1,41 @@
+[
+  {
+    "id": 1,
+    "email": "test@test.com",
+    "password": "123456",
+    "name": "Zeynep Aydemir",
+    "studentId": "20210101",
+    "program": "B.Sc. Computer Science",
+    "year": 3,
+    "totalYears": 4,
+    "advisor": "Dr. R. Wilson",
+    "department": "Computer Science Dept.",
+    "gpa": 3.72
+  },
+  {
+    "id": 2,
+    "email": "ahmet@test.com",
+    "password": "123456",
+    "name": "Ahmet Yilmaz",
+    "studentId": "20210102",
+    "program": "B.Sc. Computer Science",
+    "year": 2,
+    "totalYears": 4,
+    "advisor": "Dr. R. Wilson",
+    "department": "Computer Science Dept.",
+    "gpa": 3.45
+  },
+  {
+    "id": 3,
+    "email": "s210222016@stu.thk.edu.tr",
+    "password": "123456",
+    "name": "LadyBoy Kilicoglu",
+    "studentId": "210222016",
+    "program": "B.Sc. AeroSpace Engineering",
+    "year": 2,
+    "totalYears": 4,
+    "advisor": "Dr. R. Mehmet Demirel",
+    "department": "AeroSpace Engineering Dept.",
+    "gpa": 1.99
+  }
+]

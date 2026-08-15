@@ -1,0 +1,76 @@
+[
+  {
+    "id": 1,
+    "label": "Fall 2023-2024",
+    "status": "completed",
+    "color": "#4f7aff",
+    "gpa": 3.60,
+    "credits": 17,
+    "courses": [
+      { "code": "CS-101",   "name": "Introduction to Computer Science", "credits": 3, "grade": "AA" },
+      { "code": "MATH-101", "name": "Calculus I",                       "credits": 4, "grade": "BA" },
+      { "code": "PHYS-101", "name": "Physics I",                        "credits": 4, "grade": "BA" },
+      { "code": "ENG-101",  "name": "Academic English I",               "credits": 3, "grade": "AA" },
+      { "code": "HUM-101",  "name": "Introduction to Philosophy",       "credits": 3, "grade": "BB" }
+    ]
+  },
+  {
+    "id": 2,
+    "label": "Spring 2023-2024",
+    "status": "completed",
+    "color": "#16a34a",
+    "gpa": 3.75,
+    "credits": 18,
+    "courses": [
+      { "code": "CS-102",   "name": "Programming Fundamentals", "credits": 4, "grade": "AA" },
+      { "code": "MATH-102", "name": "Calculus II",              "credits": 4, "grade": "BA" },
+      { "code": "PHYS-102", "name": "Physics II",               "credits": 4, "grade": "BB" },
+      { "code": "ENG-102",  "name": "Academic English II",      "credits": 3, "grade": "AA" },
+      { "code": "HUM-102",  "name": "History of Science",       "credits": 3, "grade": "AA" }
+    ]
+  },
+  {
+    "id": 3,
+    "label": "Fall 2024-2025",
+    "status": "completed",
+    "color": "#0ea5e9",
+    "gpa": 3.80,
+    "credits": 17,
+    "courses": [
+      { "code": "CS-201",   "name": "Data Structures",             "credits": 3, "grade": "AA" },
+      { "code": "CS-202",   "name": "Object-Oriented Programming", "credits": 3, "grade": "AA" },
+      { "code": "MATH-201", "name": "Discrete Mathematics",        "credits": 3, "grade": "BA" },
+      { "code": "CS-211",   "name": "Computer Organization",       "credits": 4, "grade": "BA" },
+      { "code": "STAT-201", "name": "Probability & Statistics",    "credits": 4, "grade": "BB" }
+    ]
+  },
+  {
+    "id": 4,
+    "label": "Spring 2024-2025",
+    "status": "completed",
+    "color": "#7c3aed",
+    "gpa": 3.70,
+    "credits": 16,
+    "courses": [
+      { "code": "CS-212",   "name": "Software Engineering",   "credits": 3, "grade": "AA" },
+      { "code": "CS-213",   "name": "Computer Networks",      "credits": 3, "grade": "BA" },
+      { "code": "CS-214",   "name": "Web Development",        "credits": 4, "grade": "BA" },
+      { "code": "MATH-202", "name": "Linear Algebra",         "credits": 3, "grade": "AA" },
+      { "code": "CS-215",   "name": "Theory of Computation",  "credits": 3, "grade": "BB" }
+    ]
+  },
+  {
+    "id": 5,
+    "label": "Fall 2025-2026",
+    "status": "current",
+    "color": "#ea580c",
+    "gpa": null,
+    "credits": 13,
+    "courses": [
+      { "code": "CS-301", "name": "Database Systems",             "credits": 3, "grade": "AA" },
+      { "code": "CS-214", "name": "Web Development",              "credits": 4, "grade": "BA" },
+      { "code": "CS-221", "name": "Algorithms & Data Structures", "credits": 3, "grade": "AA" },
+      { "code": "CS-310", "name": "Operating Systems",            "credits": 3, "grade": "IP" }
+    ]
+  }
+]

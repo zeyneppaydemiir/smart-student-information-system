@@ -1,0 +1,22 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(Get-ChildItem -Recurse \"c:\\\\Users\\\\mitha\\\\Desktop\\\\Bitirme Projesi\\\\student-assistant-backend\" | Where-Object { $_.Extension -eq \".js\" } | Select-Object FullName)",
+      "PowerShell(cmd /c \"dir /s /b `\"c:\\\\Users\\\\mitha\\\\Desktop\\\\Bitirme Projesi\\\\student-assistant-backend`\" | findstr /v node_modules | findstr /i `\".js$`\"\")",
+      "PowerShell(cmd /c \"dir /s /b `\"c:\\\\Users\\\\mitha\\\\Desktop\\\\Bitirme Projesi\\\\student-assistant-frontend kopyas�\\\\src`\" | findstr /i `\"Language`\"\")",
+      "PowerShell(New-Item -ItemType Directory -Force \"c:\\\\Users\\\\mitha\\\\Desktop\\\\Bitirme Projesi\\\\student-assistant-backend\\\\scripts\")",
+      "PowerShell(cd \"c:\\\\Users\\\\mitha\\\\Desktop\\\\Bitirme Projesi\\\\student-assistant-backend\"; node -e \"const prisma = require\\('./lib/prisma'\\); prisma.course.findFirst\\(\\).then\\(c => { console.log\\('Course fields:', Object.keys\\(c\\)\\); prisma.$disconnect\\(\\); }\\)\")",
+      "PowerShell(cd \"c:\\\\Users\\\\mitha\\\\Desktop\\\\Bitirme Projesi\\\\student-assistant-backend\"; node -e \"const {PrismaClient} = require\\('@prisma/client'\\); const p = new PrismaClient\\(\\); p.course.findFirst\\(\\).then\\(c => { console.log\\('Sample course:', JSON.stringify\\(c, null, 2\\)\\); p.$disconnect\\(\\); }\\)\")",
+      "PowerShell(cmd /c \"dir /s /b `\"c:\\\\Users\\\\mitha\\\\Desktop\\\\Bitirme Projesi\\\\student-assistant-frontend kopyas�\\\\src\\\\pages`\"\")",
+      "PowerShell(cmd /c \"dir /b `\"c:\\\\Users\\\\mitha\\\\Desktop\\\\Bitirme Projesi\\\\student-assistant-backend\\\\data`\"\")",
+      "PowerShell($content = Get-Content \"c:\\\\Users\\\\mitha\\\\Desktop\\\\Bitirme Projesi\\\\student-assistant-backend\\\\data\\\\transcript.json\" -Raw; $content.Substring\\(0, [Math]::Min\\(1000, $content.Length\\)\\))",
+      "PowerShell($content = Get-Content \"c:\\\\Users\\\\mitha\\\\Desktop\\\\Bitirme Projesi\\\\student-assistant-backend\\\\data\\\\transcript.json\" -Raw; $json = $content | ConvertFrom-Json; $json | ForEach-Object { $_.label })",
+      "PowerShell($content = Get-Content \"c:\\\\Users\\\\mitha\\\\Desktop\\\\Bitirme Projesi\\\\student-assistant-backend\\\\data\\\\transcript.json\" -Raw; $content.Substring\\($content.Length - 500, 500\\))",
+      "PowerShell(cd \"c:\\\\Users\\\\mitha\\\\Desktop\\\\Bitirme Projesi\\\\student-assistant-backend\"; node -e \"const p = require\\('./lib/prisma'\\); p.courseOffering.findFirst\\({include:{curriculum:true,instructor:true}}\\).then\\(r=>console.log\\(JSON.stringify\\(r,null,2\\)\\)\\).catch\\(e=>console.log\\('ERROR:',e.message\\)\\).finally\\(\\(\\)=>p.$disconnect\\(\\)\\)\")",
+      "PowerShell(New-Item -ItemType Directory -Force \"c:\\\\Users\\\\mitha\\\\Desktop\\\\Bitirme Projesi\\\\student-assistant-backend\\\\uploads\\\\announcements\")",
+      "PowerShell(Get-Process -Name \"node\" -ErrorAction SilentlyContinue | Where-Object { $_.MainWindowTitle -eq \"\" } | Select-Object Id, CPU, StartTime, @{N=\"Args\";E={ \\(Get-WmiObject Win32_Process -Filter \"ProcessId=$\\($_.Id\\)\"\\).CommandLine }})",
+      "PowerShell(Stop-Process -Id 684 -Force; Start-Sleep -Seconds 1; cd \"c:\\\\Users\\\\mitha\\\\Desktop\\\\Bitirme Projesi\\\\student-assistant-backend\"; Start-Process -FilePath \"node\" -ArgumentList \"server.js\" -WorkingDirectory \"c:\\\\Users\\\\mitha\\\\Desktop\\\\Bitirme Projesi\\\\student-assistant-backend\" -WindowStyle Hidden; Start-Sleep -Seconds 2; try { $r = Invoke-WebRequest -Uri \"http://localhost:3001/\" -TimeoutSec 5; \"Server up: $\\($r.StatusCode\\)\" } catch { \"Server not responding: $_\" })",
+      "PowerShell(Stop-Process -Id 684 -Force -ErrorAction SilentlyContinue; Start-Sleep -Seconds 1; cd \"c:\\\\Users\\\\mitha\\\\Desktop\\\\Bitirme Projesi\\\\student-assistant-backend\"; Start-Process -FilePath \"node\" -ArgumentList \"server.js\" -WorkingDirectory \"c:\\\\Users\\\\mitha\\\\Desktop\\\\Bitirme Projesi\\\\student-assistant-backend\" -WindowStyle Hidden; Start-Sleep -Seconds 3; \\(Invoke-RestMethod -Uri \"http://localhost:3001/\" -Method GET -ErrorAction Stop\\).message)"
+    ]
+  }
+}
