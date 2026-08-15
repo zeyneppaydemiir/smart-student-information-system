@@ -142,6 +142,11 @@ Prisma ORM
       ▼
 MySQL Database
 ```
+## 📄 Project Documentation
+
+The complete graduation project report is available below:
+
+[📘 Graduation Project Report](docs/Graduation_Project_Report.pdf)
 
 ## 🎯 Project Goals
 
